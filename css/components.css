@@ -823,7 +823,7 @@
 .lineup-name {
   font-size: 20px;
   font-weight: 800;
-  color: #FFFFFF;
+  color: var(--text-primary);
 }
 
 .lineup-freq {
