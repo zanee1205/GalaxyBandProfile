@@ -1,0 +1,423 @@
+/* ==========================================================================
+   GALAXY BAND - RESPONSIVE ADAPTATIONS (responsive.css)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. TABLET SCREENS (640px - 1023px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1023px) {
+  :root {
+    --fs-display: 42px;
+    --fs-h2: 32px;
+    --section-padding-y: 72px;
+  }
+
+  .hero-split-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-40);
+  }
+
+  .hero-stage-card-3d {
+    max-width: 500px;
+    margin-inline: auto;
+    transform: none !important;
+  }
+
+  /* Bento Grid on Tablet */
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 240px;
+  }
+
+  .bento-tile-lg {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .bento-tile-tall {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .bento-tile-sm {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  /* Artist Stage Deck on Tablet */
+  .stage-deck-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Stage Lineup on Tablet */
+  .lineup-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .booking-split-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-36);
+  }
+
+  /* Pricing Cards & Footer on Tablet */
+  .pricing-tables-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-28);
+  }
+
+  .footer-main-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-36);
+  }
+
+  .stages-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. MOBILE SCREENS (0 - 639px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 639px) {
+  :root {
+    --header-height: 68px;
+    --fs-display: 32px;
+    --lh-display: 1.15;
+    --fs-h2: 26px;
+    --lh-h2: 1.2;
+    --fs-h3: 19px;
+    --section-padding-y: 56px;
+    --container-padding-x: 16px;
+  }
+
+  .nav-menu, .header-actions .btn-dark, .header-actions .lang-select-btn {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .site-header {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .mobile-floating-bar {
+    display: block;
+  }
+
+  body {
+    padding-bottom: 76px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-12);
+    margin-bottom: var(--space-40);
+  }
+
+  .section-subtitle {
+    margin-top: 6px;
+    line-height: 1.6;
+    font-size: 14px;
+  }
+
+  /* Hero Section */
+  .hero-split-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-32);
+  }
+
+  .hero-h1 {
+    font-size: 30px;
+  }
+
+  .hero-desc {
+    font-size: 14px;
+  }
+
+  .hero-actions-row {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .hero-actions-row .btn {
+    width: 100%;
+  }
+
+  .stats-strip {
+    gap: var(--space-16);
+  }
+
+  .stat-number {
+    font-size: 22px;
+  }
+
+  .hero-soundwave-player {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hero-stage-card-3d {
+    max-width: 100%;
+    transform: none !important;
+  }
+
+  /* Bento Grid on Mobile (Scroll Snap Slider) */
+  .bento-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+    padding-bottom: 4px;
+    gap: 14px;
+    margin-top: var(--space-24);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .bento-grid::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  .bento-tile {
+    flex: 0 0 85%;
+    height: 320px;
+    scroll-snap-align: start;
+  }
+
+  /* Artist Stage Deck on Mobile */
+  .stage-deck-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-28);
+    margin-top: var(--space-28);
+  }
+
+  /* Stage Lineup on Mobile */
+  .lineup-grid-4 {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+    padding-bottom: 4px;
+    gap: 14px;
+    margin-top: var(--space-28);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .lineup-grid-4::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  .lineup-card {
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+  }
+
+  /* Disable upward card jump on mobile hover/touch */
+  .lineup-card:hover,
+  .artist-deck-card:hover,
+  .bento-tile:hover {
+    transform: none !important;
+  }
+
+  /* Glass Booking */
+  .booking-glass-card {
+    padding: 24px 16px;
+    border-radius: var(--radius-card);
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-16);
+  }
+
+  /* Pricing Cards on Mobile */
+  .pricing-tables-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-20);
+  }
+
+  .pricing-master-card {
+    padding: 22px 16px;
+    border-radius: var(--radius-md);
+  }
+
+  .pricing-tier-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .pricing-tier-right {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+  }
+
+  /* Schedule Cards on Mobile */
+  .schedule-list {
+    gap: var(--space-12);
+  }
+
+  .schedule-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .schedule-card:hover {
+    transform: none !important;
+  }
+
+  .schedule-day-col {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+  }
+
+  .schedule-day-title {
+    font-size: 17px;
+  }
+
+  .schedule-date-str {
+    font-size: 13px;
+  }
+
+  .schedule-info-col {
+    border-left: none;
+    padding-left: 0;
+    width: 100%;
+    gap: 6px;
+  }
+
+  .schedule-show-name {
+    font-size: 16px;
+    line-height: 1.35;
+    word-break: break-word;
+  }
+
+  .schedule-venue {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .schedule-time {
+    font-size: 12.5px;
+  }
+
+  .page-h1 {
+    font-size: 28px;
+    line-height: 1.2;
+    word-break: break-word;
+  }
+
+  .page-subtext {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .booking-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-28);
+  }
+
+  .booking-form-card {
+    padding: 24px 16px;
+    border-radius: var(--radius-card);
+  }
+
+  /* Subpage components on Mobile */
+  .format-grid-2x2 {
+    grid-template-columns: 1fr;
+  }
+
+  .format-card-horizontal {
+    flex-direction: column;
+  }
+
+  .format-card-thumb {
+    width: 100%;
+    min-height: 160px;
+  }
+
+  .stages-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .event-media-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .timeline-process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guidelines-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-grid-3x3 {
+    grid-template-columns: 1fr;
+  }
+
+  .accordion-header {
+    padding: 16px 18px;
+    font-size: 15px;
+  }
+
+  .accordion-content {
+    padding: 0 18px 18px 18px;
+    font-size: 13.5px;
+  }
+
+  /* Footer on Mobile */
+  .footer-main-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-28);
+  }
+
+  .footer-action-buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .footer-action-buttons .action-pill-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

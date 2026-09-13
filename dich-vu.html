@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Cho Thuê Ban Nhạc Event, Sự Kiện & Gala Dinner Tại TP.HCM — Galaxy Band</title>
+  <meta name="description" content="Dịch vụ cho thuê ban nhạc sự kiện, Gala Dinner, Year End Party chuyên nghiệp tại TP.HCM. Báo giá minh bạch, đa dạng đội hình từ Acoustic 3-4 người đến Full Band 7 người.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Modular CSS Architecture -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Cosmic Background Glow Effects -->
+  <div class="cosmic-background">
+    <div class="starfield"></div>
+    <div class="nebula-blob nebula-top-left"></div>
+    <div class="nebula-blob nebula-bottom-right"></div>
+    <div class="nebula-blob nebula-center-accent"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="main-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" title="Trang chủ Galaxy Band">
+        <div class="logo-icon-wrap">
+          <img src="galaxy band logo.jpg" alt="Galaxy Band Logo" class="logo-img">
+        </div>
+        <span class="brand-name">Galaxy Band</span>
+      </a>
+
+      <nav class="nav-container" aria-label="Menu chính">
+        <ul class="nav-menu">
+          <li><a href="index.html#vocal" class="nav-link">Vocal</a></li>
+          <li><a href="index.html#nhac-cong" class="nav-link">Nhạc công</a></li>
+          <li><a href="index.html" class="nav-link">Xem trình diễn</a></li>
+          <li><a href="lich-show.html" class="nav-link">Lịch show</a></li>
+          <li class="nav-item-dropdown">
+            <a href="dich-vu.html" class="nav-link active-pill">
+              Dịch vụ
+              <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <div class="dropdown-panel">
+              <a href="#event-band" class="dropdown-link">Thuê ban nhạc Event & Gala Dinner</a>
+              <a href="#format-section" class="dropdown-link">Các format đội hình biểu diễn</a>
+              <a href="#pricing-section" class="dropdown-link">Bảng giá tham khảo chi tiết</a>
+              <a href="#faq-section" class="dropdown-link">Câu hỏi thường gặp (FAQ)</a>
+            </div>
+          </li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="lang-select-btn" data-lang="VI" aria-label="Chuyển đổi ngôn ngữ">
+          <span>VI</span>
+          <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+
+        <button class="theme-toggle-btn" aria-label="Chuyển đổi giao diện sáng/tối">
+          <svg class="theme-icon" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <a href="#contact" class="btn btn-dark">Book now</a>
+
+        <button class="hamburger-btn" aria-label="Mở menu điều hướng">
+          <svg class="hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu-overlay" id="mobile-drawer">
+    <button class="mobile-menu-close-btn" aria-label="Đóng menu">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html#vocal" class="mobile-nav-link">Vocal Showcase</a></li>
+      <li><a href="index.html#nhac-cong" class="mobile-nav-link">Đội hình Nhạc công</a></li>
+      <li><a href="index.html" class="mobile-nav-link">Xem trình diễn</a></li>
+      <li><a href="lich-show.html" class="mobile-nav-link">Lịch show diễn</a></li>
+      <li><a href="dich-vu.html" class="mobile-nav-link active">Dịch vụ sự kiện</a></li>
+      <li><a href="blog.html" class="mobile-nav-link">Blog & Kinh nghiệm</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Liên hệ & Báo giá</a></li>
+    </ul>
+    <div class="mobile-nav-actions">
+      <a href="#contact" class="btn btn-primary" style="width: 100%;">Book Band Ngay</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- A. HERO DỊCH VỤ SỰ KIỆN -->
+    <section class="section" style="padding-top: 24px;" id="event-band">
+      <div class="container">
+        <div class="service-hero-card">
+          <img src="Band on stage 2.jpg" alt="Cho thuê ban nhạc sự kiện tại TP.HCM" class="service-hero-img" loading="eager">
+          <div class="service-hero-overlay"></div>
+          
+          <div class="service-hero-content">
+            <span class="badge badge-primary">
+              <span class="badge-dot"></span>
+              DỊCH VỤ SỰ KIỆN & EVENT TẠI TP.HCM
+            </span>
+
+            <h1 style="font-size: 38px; line-height: 1.2;">
+              Cho thuê ban nhạc Event, Sự kiện tại TP.HCM
+            </h1>
+
+            <p style="font-size: 16px; color: var(--text-secondary);">
+              Giải pháp âm nhạc toàn diện từ dàn dựng hòa âm, kết nối ban nhạc chuyên nghiệp đến hệ thống âm thanh ánh sáng sân khấu cao cấp.
+            </p>
+
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+              <a href="#contact" class="btn btn-primary">Nhận báo giá chi tiết</a>
+              <button class="btn btn-secondary" onclick="GalaxyApp.openVideoModal('Galaxy Band — Showreel Tổng Hợp Event Sân Khấu', 'Band on stage 2.jpg')">
+                Xem video trình diễn
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- B. SECTION 2X2: MỖI SỰ KIỆN CẦN MỘT ĐỘI HÌNH KHÁC NHAU -->
+    <section class="section" id="format-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header-col">
+            <span class="badge">
+              <span class="badge-dot"></span>
+              FORMAT ĐỘI HÌNH
+            </span>
+            <h2>Mỗi sự kiện cần một đội hình band khác nhau</h2>
+          </div>
+        </div>
+
+        <div class="format-grid-2x2">
+          
+          <!-- Format 1: Gala Dinner -->
+          <div class="format-card-horizontal">
+            <div class="format-card-thumb">
+              <img src="Band on stage 1.jpg" alt="Gala Dinner & YEP" loading="lazy">
+            </div>
+            <div class="format-card-body">
+              <div>
+                <h3 class="format-card-title">Gala Dinner & Year End Party</h3>
+                <p class="format-card-desc">Đội hình Full Band 5-7 người tạo cao trào bùng nổ, kết nối toàn thể nhân viên và ban lãnh đạo.</p>
+              </div>
+              <a href="#contact" class="link-ghost link-ghost-accent btn-quick-book" data-service="gala">Xem show mẫu &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Format 2: Tiệc Cưới -->
+          <div class="format-card-horizontal">
+            <div class="format-card-thumb">
+              <img src="vocalist - Ngọc Giàu.jpg" alt="Tiệc Cưới Sang Trọng" loading="lazy">
+            </div>
+            <div class="format-card-body">
+              <div>
+                <h3 class="format-card-title">Tiệc Cưới & Lễ Kỷ Niệm</h3>
+                <p class="format-card-desc">Acoustic Pop & Ballad ngọt ngào 3-4 người đệm cho nghi thức làm lễ và suốt tiệc rượu ấm cúng.</p>
+              </div>
+              <a href="#contact" class="link-ghost link-ghost-accent btn-quick-book" data-service="wedding">Xem show mẫu &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Format 3: Ra mắt sản phẩm -->
+          <div class="format-card-horizontal">
+            <div class="format-card-thumb">
+              <img src="guitarist - Nhật Hào.JPG" alt="Lễ Ra Mắt Sản Phẩm" loading="lazy">
+            </div>
+            <div class="format-card-body">
+              <div>
+                <h3 class="format-card-title">Lễ Ra Mắt & Hội Nghị Khách Hàng</h3>
+                <p class="format-card-desc">Âm nhạc Instrumental / Pop hiện đại sang trọng, tôn vinh hình ảnh chuyên nghiệp của thương hiệu.</p>
+              </div>
+              <a href="#contact" class="link-ghost link-ghost-accent btn-quick-book" data-service="product">Xem show mẫu &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Format 4: Acoustic Lounge -->
+          <div class="format-card-horizontal">
+            <div class="format-card-thumb">
+              <img src="vocalist - Louis Nguyễn.jpg" alt="Acoustic Lounge & Cafe" loading="lazy">
+            </div>
+            <div class="format-card-body">
+              <div>
+                <h3 class="format-card-title">Acoustic Lounge & Private Bar</h3>
+                <p class="format-card-desc">Không gian mộc mạc lắng đọng, tương tác gần gũi giữa nghệ sĩ và khán giả qua các bản tình ca.</p>
+              </div>
+              <a href="#contact" class="link-ghost link-ghost-accent btn-quick-book" data-service="acoustic">Xem show mẫu &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- C. SECTION: CHỌN ĐỘI HÌNH THEO SÂN KHẤU, SỐ KHÁCH & NĂNG LƯỢNG -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header-col">
+            <span class="badge">
+              <span class="badge-dot"></span>
+              QUY MÔ & KHÔNG GIAN
+            </span>
+            <h2>Chọn đội hình theo sân khấu, số khách và mức năng lượng</h2>
+          </div>
+        </div>
+
+        <div class="stages-grid-3">
+          
+          <div class="stage-card">
+            <div class="stage-card-img-wrap">
+              <span class="badge badge-dark stage-card-badge">3-4 Người · Acoustic Nhẹ</span>
+              <img src="vocalist - Louis Nguyễn.jpg" alt="Acoustic Trio" loading="lazy">
+            </div>
+            <div class="stage-card-body">
+              <h3 style="font-size: 19px;">Acoustic Trio / Quartet</h3>
+              <p style="font-size: 13px; color: var(--text-secondary);">Phù hợp: Dưới 150 khách · Không gian ấm cúng, lounge, tiệc thân mật.</p>
+              <span style="font-size: 13px; color: var(--accent); font-weight: 600;">1 Vocal + Guitar + Cajon/Keyboard</span>
+            </div>
+          </div>
+
+          <div class="stage-card">
+            <div class="stage-card-img-wrap">
+              <span class="badge badge-dark stage-card-badge">4-5 Người · Live Band Vừa</span>
+              <img src="Band on stage 2.jpg" alt="Semi Band" loading="lazy">
+            </div>
+            <div class="stage-card-body">
+              <h3 style="font-size: 19px;">Semi-Live Band</h3>
+              <p style="font-size: 13px; color: var(--text-secondary);">Phù hợp: 150 - 350 khách · Gala Dinner, tiệc cưới khách sạn 5 sao.</p>
+              <span style="font-size: 13px; color: var(--accent); font-weight: 600;">2 Vocals + Guitar + Drums + Keyboard</span>
+            </div>
+          </div>
+
+          <div class="stage-card">
+            <div class="stage-card-img-wrap">
+              <span class="badge badge-dark stage-card-badge">6-7 Người · Full Stage</span>
+              <img src="Band on stage 1.jpg" alt="Full Live Band" loading="lazy">
+            </div>
+            <div class="stage-card-body">
+              <h3 style="font-size: 19px;">Full Live Band Concert</h3>
+              <p style="font-size: 13px; color: var(--text-secondary);">Phù hợp: Trên 400 khách · Sân khấu lớn, Year End Party hoành tráng.</p>
+              <span style="font-size: 13px; color: var(--accent); font-weight: 600;">3 Vocals (Nam + Nữ) + Full dàn 4 Nhạc công</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- D. SECTION: BẢNG GIÁ THAM KHẢO GALA DINNER -->
+    <section class="section" id="pricing-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header-col">
+            <span class="badge">
+              <span class="badge-dot"></span>
+              BẢNG GIÁ MINH BẠCH
+            </span>
+            <h2>Bảng giá tham khảo cho Gala Dinner, Event & YEP</h2>
+            <p style="font-size: 15px; color: var(--text-secondary); margin-top: 6px;">
+              Báo giá rõ ràng, minh bạch theo từng quy mô sân khấu và cấu hình âm thanh thực tế.
+            </p>
+          </div>
+        </div>
+
+        <div class="pricing-tables-grid">
+          
+          <!-- Master Card 1: Gói Đội Hình Ban Nhạc -->
+          <div class="pricing-master-card">
+            <div class="pricing-header-top">
+              <span class="badge badge-primary" style="width: fit-content;">GÓI BAN NHẠC BIỂU DIỄN</span>
+              <h3 class="pricing-card-title">1. Đội Hình Band (Chưa gồm Sound)</h3>
+              <p class="pricing-card-subtitle">
+                Dành cho các địa điểm đã có sẵn hệ thống âm thanh ánh sáng sân khấu đạt chuẩn biểu diễn.
+              </p>
+            </div>
+
+            <div class="pricing-tier-list">
+              <!-- Tier 1: Trio -->
+              <div class="pricing-tier-item">
+                <div class="pricing-tier-left">
+                  <div class="pricing-tier-name-row">
+                    <span class="pricing-tier-name">Trio Acoustic</span>
+                    <span class="pricing-tier-tag">3 Người</span>
+                  </div>
+                  <div class="pricing-tier-lineup">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>1 Vocal + Guitar + Cajon/Piano</span>
+                  </div>
+                </div>
+                <div class="pricing-tier-right">
+                  <span class="pricing-price-val">8.000.000đ</span>
+                  <span class="pricing-price-note">/ Show (2-3 set)</span>
+                  <a href="#contact" class="pricing-tier-cta-btn btn-quick-book" data-service="acoustic">Đặt gói này &rarr;</a>
+                </div>
+              </div>
+
+              <!-- Tier 2: Quartet -->
+              <div class="pricing-tier-item">
+                <div class="pricing-tier-left">
+                  <div class="pricing-tier-name-row">
+                    <span class="pricing-tier-name">Quartet Pop Band</span>
+                    <span class="pricing-tier-tag">4 Người</span>
+                  </div>
+                  <div class="pricing-tier-lineup">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>1 Vocal + Guitar + Drums + Bass</span>
+                  </div>
+                </div>
+                <div class="pricing-tier-right">
+                  <span class="pricing-price-val">12.000.000đ</span>
+                  <span class="pricing-price-note">/ Show (2-3 set)</span>
+                  <a href="#contact" class="pricing-tier-cta-btn btn-quick-book" data-service="wedding">Đặt gói này &rarr;</a>
+                </div>
+              </div>
+
+              <!-- Tier 3: Quintet (Hot) -->
+              <div class="pricing-tier-item tier-highlight">
+                <div class="pricing-tier-left">
+                  <div class="pricing-tier-name-row">
+                    <span class="pricing-tier-name">Quintet Live Band</span>
+                    <span class="pricing-tier-tag tag-hot">🔥 5 Người — Khuyên Dùng</span>
+                  </div>
+                  <div class="pricing-tier-lineup">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>2 Vocals (Nam/Nữ) + Guitar + Drums + Keys</span>
+                  </div>
+                </div>
+                <div class="pricing-tier-right">
+                  <span class="pricing-price-val">16.000.000đ</span>
+                  <span class="pricing-price-note">/ Show (2-3 set)</span>
+                  <a href="#contact" class="pricing-tier-cta-btn btn-quick-book" data-service="gala">Đặt gói này &rarr;</a>
+                </div>
+              </div>
+
+              <!-- Tier 4: Full Band -->
+              <div class="pricing-tier-item">
+                <div class="pricing-tier-left">
+                  <div class="pricing-tier-name-row">
+                    <span class="pricing-tier-name">Full Band Live Concert</span>
+                    <span class="pricing-tier-tag">👑 7 Người VIP</span>
+                  </div>
+                  <div class="pricing-tier-lineup">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>3 Vocals + Full dàn 4 Nhạc công chuyên nghiệp</span>
+                  </div>
+                </div>
+                <div class="pricing-tier-right">
+                  <span class="pricing-price-val">22.000.000đ</span>
+                  <span class="pricing-price-note">/ Show (2-3 set)</span>
+                  <a href="#contact" class="pricing-tier-cta-btn btn-quick-book" data-service="gala">Đặt gói này &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="pricing-footer-features">
+              <div class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Thời lượng: 2 - 3 set diễn phân bổ linh hoạt theo kịch bản sự kiện</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Hỗ trợ tập và hòa âm 1 - 2 bài hát riêng theo yêu cầu của doanh nghiệp</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Trang phục nghệ sĩ lịch lãm, sang trọng theo đúng dresscode chương trình</span>
+              </div>
+              <p class="pricing-bottom-note">* Áp dụng cho sự kiện tại nội thành TP.HCM (Chưa bao gồm VAT 8%).</p>
+            </div>
+          </div>
+
+          <!-- Master Card 2: Combo Trọn Gói (Band + Âm Thanh) -->
+          <div class="pricing-master-card featured-pricing" id="sound-system">
+            <span class="pricing-featured-badge">⭐ TIẾT KIỆM & ĐỒNG BỘ 100%</span>
+            
+            <div class="pricing-header-top">
+              <span class="badge badge-cyan" style="width: fit-content;">COMBO TRỌN GÓI CAO CẤP</span>
+              <h3 class="pricing-card-title">2. Combo Band + Âm Thanh Sân Khấu</h3>
+              <p class="pricing-card-subtitle">
+                Giải pháp trọn gói đồng bộ tuyệt đối về kỹ thuật, có Soundman phụ trách xuyên suốt.
+              </p>
+            </div>
+
+            <div class="pricing-tier-list">
+              <!-- Combo 1: Acoustic -->
+              <div class="pricing-tier-item">
+                <div class="pricing-tier-left">
+                  <div class="pricing-tier-name-row">
+                    <span class="pricing-tier-name">Combo Acoustic Pro</span>
+                    <span class="pricing-tier-tag">Dưới 150 Khách</span>
+                  </div>
+                  <div class="pricing-tier-lineup">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Band 4 người + Hệ thống âm thanh Event 200 pax</span>
+                  </div>
+                </div>
+                <div class="pricing-tier-right">
+                  <span class="pricing-price-val">17.500.000đ</span>
+                  <span class="pricing-price-note">/ Trọn gói show</span>
+                  <a href="#contact" class="pricing-tier-cta-btn btn-quick-book" data-service="combo">Đặt gói này &rarr;</a>
+                </div>
+              </div>
+
+              <!-- Combo 2: Gala Standard -->
+              <div class="pricing-tier-item tier-highlight">
+                <div class="pricing-tier-left">
+                  <div class="pricing-tier-name-row">
+                    <span class="pricing-tier-name">Combo Gala Standard</span>
+                    <span class="pricing-tier-tag tag-hot">⭐ 150 - 350 Khách</span>
+                  </div>
+                  <div class="pricing-tier-lineup">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Band 5 người + Loa Column Array chất lượng cao</span>
+                  </div>
+                </div>
+                <div class="pricing-tier-right">
+                  <span class="pricing-price-val">24.000.000đ</span>
+                  <span class="pricing-price-note">/ Trọn gói show</span>
+                  <a href="#contact" class="pricing-tier-cta-btn btn-quick-book" data-service="combo">Đặt gói này &rarr;</a>
+                </div>
+              </div>
+
+              <!-- Combo 3: Gala Premium -->
+              <div class="pricing-tier-item">
+                <div class="pricing-tier-left">
+                  <div class="pricing-tier-name-row">
+                    <span class="pricing-tier-name">Combo Gala Premium</span>
+                    <span class="pricing-tier-tag">👑 350 - 600 Khách</span>
+                  </div>
+                  <div class="pricing-tier-lineup">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Full Band 7 người + Hệ thống Line Array sự kiện lớn</span>
+                  </div>
+                </div>
+                <div class="pricing-tier-right">
+                  <span class="pricing-price-val">32.000.000đ</span>
+                  <span class="pricing-price-note">/ Trọn gói show</span>
+                  <a href="#contact" class="pricing-tier-cta-btn btn-quick-book" data-service="combo">Đặt gói này &rarr;</a>
+                </div>
+              </div>
+
+              <!-- Combo 4: Concert Festival -->
+              <div class="pricing-tier-item">
+                <div class="pricing-tier-left">
+                  <div class="pricing-tier-name-row">
+                    <span class="pricing-tier-name">Concert & Festival</span>
+                    <span class="pricing-tier-tag">Quy Mô Khủng</span>
+                  </div>
+                  <div class="pricing-tier-lineup">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>Full Band + Trọn gói Âm thanh Ánh sáng Full Stage</span>
+                  </div>
+                </div>
+                <div class="pricing-tier-right">
+                  <span class="pricing-price-val" style="font-size: 15px;">Liên hệ báo giá</span>
+                  <span class="pricing-price-note">Khảo sát tận nơi</span>
+                  <a href="#contact" class="pricing-tier-cta-btn btn-quick-book" data-service="combo">Tư vấn ngay &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="pricing-footer-features">
+              <div class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Đã bao gồm Kỹ sư âm thanh (Soundman) túc trực điều phối suốt tiệc</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Dàn micro không dây Shure chuyên nghiệp dành riêng cho MC & Ban lãnh đạo</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Setup & Soundcheck hoàn tất trước giờ đón khách tối thiểu 2 tiếng</span>
+              </div>
+              <p class="pricing-bottom-note">* Đã bao gồm toàn bộ chi phí vận chuyển & kỹ thuật viên lắp đặt tại TP.HCM.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- E. SECTION: MEDIA EVENT GALLERY -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header-col">
+            <span class="badge">
+              <span class="badge-dot"></span>
+              SHOWCASE GALLERY
+            </span>
+            <h2>Xem media Event của Galaxy Band</h2>
+          </div>
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="link-ghost">
+            Xem toàn bộ trên YouTube &rarr;
+          </a>
+        </div>
+
+        <div class="event-media-grid">
+          <div class="event-media-card" onclick="GalaxyApp.openVideoModal('Live Band — Gala Techcombank GEM Center', 'Band on stage 1.jpg')">
+            <img src="Band on stage 1.jpg" alt="Show Event 1" loading="lazy">
+            <div class="event-media-overlay">
+              <span class="badge badge-dark">GALA DINNER</span>
+              <span style="color: #fff; font-weight: 600; font-size: 14px;">Gala Dinner GEM Center</span>
+            </div>
+          </div>
+
+          <div class="event-media-card" onclick="GalaxyApp.openVideoModal('Tiệc Cưới Lãng Mạn — Park Hyatt Saigon', 'Band on stage 2.jpg')">
+            <img src="Band on stage 2.jpg" alt="Show Event 2" loading="lazy">
+            <div class="event-media-overlay">
+              <span class="badge badge-dark">WEDDING</span>
+              <span style="color: #fff; font-weight: 600; font-size: 14px;">Wedding Show Park Hyatt</span>
+            </div>
+          </div>
+
+          <div class="event-media-card" onclick="GalaxyApp.openVideoModal('Live Solo Guitar Đốt Cháy Sân Khấu', 'guitarist - Nhật Hào.JPG')">
+            <img src="guitarist - Nhật Hào.JPG" alt="Show Event 3" loading="lazy">
+            <div class="event-media-overlay">
+              <span class="badge badge-dark">SOLO SHOWCASE</span>
+              <span style="color: #fff; font-weight: 600; font-size: 14px;">Guitarist Nhật Hào Solo</span>
+            </div>
+          </div>
+
+          <div class="event-media-card" onclick="GalaxyApp.openVideoModal('Drummer Trần Khuê — Live Drum Solo', 'drummer - Trần Khuê.jpg')">
+            <img src="drummer - Trần Khuê.jpg" alt="Show Event 4" loading="lazy">
+            <div class="event-media-overlay">
+              <span class="badge badge-dark">DRUM PERFORMANCE</span>
+              <span style="color: #fff; font-weight: 600; font-size: 14px;">Drummer Trần Khuê Solo</span>
+            </div>
+          </div>
+
+          <div class="event-media-card" onclick="GalaxyApp.openVideoModal('Vocalist Trang Halley — US/UK Medley', 'vocalist - Trang Halley.jpg')">
+            <img src="vocalist - Trang Halley.jpg" alt="Show Event 5" loading="lazy">
+            <div class="event-media-overlay">
+              <span class="badge badge-dark">EDM & REMIX</span>
+              <span style="color: #fff; font-weight: 600; font-size: 14px;">Trang Halley Remix Set</span>
+            </div>
+          </div>
+
+          <div class="event-media-card" onclick="GalaxyApp.openVideoModal('Vocalist Louis Nguyễn — Đêm Acoustic Chill', 'vocalist - Louis Nguyễn.jpg')">
+            <img src="vocalist - Louis Nguyễn.jpg" alt="Show Event 6" loading="lazy">
+            <div class="event-media-overlay">
+              <span class="badge badge-dark">ACOUSTIC NIGHT</span>
+              <span style="color: #fff; font-weight: 600; font-size: 14px;">Louis Nguyễn Indie Pop</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- F. SECTION: QUY TRÌNH 4 MỐC CHƯƠNG TRÌNH -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header-col">
+            <span class="badge">
+              <span class="badge-dot"></span>
+              QUY TRÌNH CHUYÊN NGHIỆP
+            </span>
+            <h2>Quy trình điều phối 4 mốc chương trình mượt mà</h2>
+          </div>
+        </div>
+
+        <div class="timeline-process-grid">
+          
+          <div class="process-col">
+            <div class="process-step-num">1</div>
+            <h3 class="process-title">Tiếp Nhận Brief & Tư Vấn</h3>
+            <p class="process-desc">Khảo sát địa điểm, quy mô khách và gu âm nhạc để đề xuất format đội hình tối ưu nhất.</p>
+          </div>
+
+          <div class="process-col">
+            <div class="process-step-num">2</div>
+            <h3 class="process-title">Thống Nhất Setlist & Hòa Âm</h3>
+            <p class="process-desc">Chốt danh sách bài hát, phối mới theo yêu cầu riêng và tập luyện kỹ lưỡng trước show.</p>
+          </div>
+
+          <div class="process-col">
+            <div class="process-step-num">3</div>
+            <h3 class="process-title">Soundcheck Trước Giờ Diễn 2h</h3>
+            <p class="process-desc">Có mặt sớm setup nhạc cụ, cân chỉnh âm thanh từng line mic và khớp timeline cùng ban tổ chức.</p>
+          </div>
+
+          <div class="process-col">
+            <div class="process-step-num">4</div>
+            <h3 class="process-title">Biểu Diễn Bùng Nổ Sân Khấu</h3>
+            <p class="process-desc">Dẫn dắt cảm xúc người nghe từ êm dịu khai tiệc đến cao trào cuồng nhiệt, trọn vẹn thành công.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- G & H. SECTION: BRIEF VÀ CHECKLIST LƯU Ý -->
+    <section class="section">
+      <div class="container">
+        <div class="guidelines-grid">
+          
+          <div>
+            <span class="badge" style="margin-bottom: 16px;">
+              <span class="badge-dot"></span>
+              KINH NGHIỆM TỔ CHỨC
+            </span>
+            <h2 style="margin-bottom: 20px;">Một brief rõ giúp band và ekip chạy chương trình mượt mà hơn</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 24px;">
+              Khi quý khách cung cấp đủ các thông tin cốt lõi, Galaxy Band có thể lập phương án setlist ăn khớp từng phút với kịch bản MC và thời điểm phục vụ món tiệc.
+            </p>
+            <a href="#contact" class="btn btn-primary">Nhận Mẫu Brief Sự Kiện Chuẩn</a>
+          </div>
+
+          <div class="checklist-card">
+            <h3 class="checklist-title">Gửi 6 thông tin này để nhận báo giá sát nhất:</h3>
+            <ul class="checklist-items">
+              <li class="checklist-item">
+                <svg class="checklist-check-icon" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>1. Thời gian & Ngày diễn:</strong> Ngày, giờ đón khách và giờ khai tiệc.</span>
+              </li>
+              <li class="checklist-item">
+                <svg class="checklist-check-icon" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>2. Địa điểm tổ chức:</strong> Tên sảnh, nhà hàng, khách sạn hoặc ngoài trời.</span>
+              </li>
+              <li class="checklist-item">
+                <svg class="checklist-check-icon" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>3. Số lượng khách mời dự kiến:</strong> Để tính công suất âm thanh thích hợp.</span>
+              </li>
+              <li class="checklist-item">
+                <svg class="checklist-check-icon" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>4. Thể loại / Tone & Mood mong muốn:</strong> Acoustic nhẹ nhàng hay Rock/Pop bùng nổ.</span>
+              </li>
+              <li class="checklist-item">
+                <svg class="checklist-check-icon" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>5. Đã có âm thanh chưa:</strong> Cần thuê ban nhạc riêng hay combo kèm loa mic.</span>
+              </li>
+              <li class="checklist-item">
+                <svg class="checklist-check-icon" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>6. Yêu cầu bài hát đặc biệt (nếu có):</strong> Để band tập trước nếu có bài thương hiệu.</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- K. SECTION: FAQ ACCORDION -->
+    <section class="section" id="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header-col">
+            <span class="badge">
+              <span class="badge-dot"></span>
+              FAQ
+            </span>
+            <h2>Những câu hỏi thường gặp khi thuê ban nhạc Event, YEP & Tiệc công ty</h2>
+          </div>
+        </div>
+
+        <div class="accordion-wrap">
+          
+          <div class="accordion-item is-open">
+            <button class="accordion-header" aria-expanded="true">
+              <span>Galaxy Band có thể biểu diễn theo setlist do khách hàng yêu cầu không?</span>
+              <span class="accordion-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </span>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-content">
+                Hoàn toàn được! Galaxy Band luôn sẵn sàng tiếp nhận danh sách các bài hát yêu thích hoặc bài hát thương hiệu của doanh nghiệp. Bạn chỉ cần gửi trước 5-7 ngày để ban nhạc hòa âm phối khí và tập luyện chỉn chu nhất.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>Chi phí thuê ban nhạc đã bao gồm hệ thống âm thanh, ánh sáng chưa?</span>
+              <span class="accordion-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </span>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-content">
+                Báo giá cơ bản dành riêng cho ban nhạc và nhạc cụ biểu diễn. Nếu quý khách có nhu cầu, Galaxy Band cung cấp gói combo trọn gói gồm Âm thanh - Ánh sáng biểu diễn chuyên nghiệp với mức giá ưu đãi và sự đồng bộ âm học tuyệt đối.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>Ban nhạc có thể biểu diễn ở các tỉnh thành ngoài TP.HCM không?</span>
+              <span class="accordion-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </span>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-content">
+                Có. Galaxy Band thường xuyên lưu diễn tại Bình Dương, Đồng Nai, Vũng Tàu, Đà Lạt, Phan Thiết, Phú Quốc và các tỉnh miền Tây. Chi phí công tác sẽ được tính toán hợp lý và báo rõ ràng trong hợp đồng.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>Thời gian biểu diễn của một set nhạc sự kiện thường kéo dài bao lâu?</span>
+              <span class="accordion-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </span>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-content">
+                Thông thường một show sự kiện bao gồm 2-3 set diễn (khoảng 60 - 90 phút tổng thời lượng diễn thực tế), phân bổ linh hoạt giữa đón khách, khai tiệc trang trọng và bùng nổ giao lưu sau tiệc.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>Quy trình đặt cọc và thanh toán hợp đồng như thế nào?</span>
+              <span class="accordion-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </span>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-content">
+                Sau khi thống nhất phương án và ngày diễn, hai bên ký hợp đồng dịch vụ. Khách hàng đặt cọc 30-50% để giữ lịch, phần còn lại thanh toán sau khi ban nhạc hoàn thành xuất sắc buổi diễn.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- L. BOOKING FORM SECTION -->
+    <section class="section booking-section" id="contact">
+      <div class="container">
+        <div class="booking-layout">
+          <div class="booking-info-col">
+            <span class="badge">
+              <span class="badge-dot"></span>
+              NHẬN BÁO GIÁ NHANH
+            </span>
+            <h2 class="booking-title">
+              Đặt dịch vụ ban nhạc sự kiện ngay hôm nay
+            </h2>
+            <p style="font-size: 16px; color: var(--text-secondary);">
+              Điền thông tin sự kiện của bạn để nhận báo giá chi tiết trong vòng 15 phút kèm video mẫu phù hợp.
+            </p>
+          </div>
+
+          <div class="booking-form-card">
+            <form class="galaxy-booking-form" novalidate>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label class="form-label" for="fullname">Họ và Tên *</label>
+                  <input type="text" id="fullname" name="fullname" class="form-input" placeholder="Ví dụ: Lê Hoàng Quân" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="phone">Số điện thoại / Zalo *</label>
+                  <input type="tel" id="phone" name="phone" class="form-input" placeholder="0908 123 456">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="email">Địa chỉ Email</label>
+                  <input type="email" id="email" name="email" class="form-input" placeholder="example@event.vn">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="event_type">Gói quan tâm</label>
+                  <select id="event_type" name="event_type" class="form-select">
+                    <option value="gala">Gói Gala Dinner & YEP</option>
+                    <option value="wedding">Gói Tiệc Cưới Sang Trọng</option>
+                    <option value="acoustic">Gói Acoustic Lounge</option>
+                    <option value="combo">Combo Band + Âm Thanh Ánh Sáng</option>
+                  </select>
+                </div>
+                <div class="form-group form-group-full">
+                  <label class="form-label" for="event_date">Ngày diễn ra sự kiện</label>
+                  <input type="date" id="event_date" name="event_date" class="form-input">
+                </div>
+                <div class="form-group form-group-full">
+                  <label class="form-label" for="notes">Ghi chú & Yêu cầu cụ thể</label>
+                  <textarea id="notes" name="notes" class="form-textarea" placeholder="Địa điểm, số lượng khách, bài hát yêu thích..."></textarea>
+                </div>
+                <div class="form-group form-group-full">
+                  <button type="submit" class="btn btn-primary" style="width: 100%;">
+                    Nhận tư vấn & Báo giá ưu đãi
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main-grid">
+        
+        <!-- Cột 1: Brand & Giới thiệu -->
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" title="Galaxy Band">
+            <div class="logo-icon-wrap">
+              <img src="galaxy band logo.jpg" alt="Galaxy Band Logo" class="logo-img">
+            </div>
+            <div class="brand-title-wrap">
+              <span class="brand-name">Galaxy Band</span>
+              <span class="brand-sub">Live Music & Events</span>
+            </div>
+          </a>
+          <p class="footer-brand-text">
+            Dịch vụ biểu diễn live music chuyên nghiệp cho Event, Gala Dinner, Tiệc cưới và Concert tại TP.HCM & các tỉnh thành toàn quốc. Đội ngũ nghệ sĩ bài bản, nhiệt huyết và chỉn chu trong từng nốt nhạc.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="YouTube Galaxy Band" title="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Facebook Galaxy Band" title="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="TikTok Galaxy Band" title="TikTok">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Cột 2: Dịch Vụ Sự Kiện -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Dịch Vụ Biểu Diễn</h4>
+          <ul class="footer-links-list">
+            <li><a href="dich-vu.html#format-section" class="footer-nav-link">Gala Dinner & YEP</a></li>
+            <li><a href="dich-vu.html#format-section" class="footer-nav-link">Tiệc Cưới & Kỷ Niệm</a></li>
+            <li><a href="dich-vu.html#format-section" class="footer-nav-link">Ra Mắt Sản Phẩm & Event</a></li>
+            <li><a href="dich-vu.html#format-section" class="footer-nav-link">Acoustic Lounge & Chill</a></li>
+            <li><a href="dich-vu.html#sound-system" class="footer-nav-link">Combo Band + Âm Thanh</a></li>
+          </ul>
+        </div>
+
+        <!-- Cột 3: Liên Kết Nhanh -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Khám Phá</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html#vocal" class="footer-nav-link">Đội ngũ Vocal Showcase</a></li>
+            <li><a href="index.html#nhac-cong" class="footer-nav-link">Dàn Nhạc công Chuyên Nghiệp</a></li>
+            <li><a href="lich-show.html" class="footer-nav-link">Lịch biểu diễn hàng tuần</a></li>
+            <li><a href="dich-vu.html#pricing-section" class="footer-nav-link">Bảng giá dịch vụ chi tiết</a></li>
+            <li><a href="blog.html" class="footer-nav-link">Blog & Kinh nghiệm tổ chức</a></li>
+          </ul>
+        </div>
+
+        <!-- Cột 4: Thông Tin Liên Hệ & Booking -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Tư Vấn & Booking</h4>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <div>
+                <strong style="color: var(--text-primary); display: block;">Hotline 24/7:</strong>
+                <a href="tel:0908123456" style="color: var(--accent); font-weight: 700;">0908 123 456</a> / <a href="tel:0901234567" style="color: var(--accent); font-weight: 700;">0901 234 567</a>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Phục vụ tại TP. Hồ Chí Minh & lưu diễn toàn quốc</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Phản hồi tư vấn báo giá trong 15 phút</span>
+            </li>
+          </ul>
+
+          <div class="footer-action-buttons">
+            <a href="tel:0908123456" class="action-pill-btn action-primary">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              Gọi Trực Tiếp
+            </a>
+            <a href="https://zalo.me" target="_blank" rel="noopener" class="action-pill-btn">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path></svg>
+              Chat Zalo
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; <span class="current-year">2026</span> Galaxy Band. All rights reserved.</div>
+        <div class="footer-bottom-tagline">Khơi dậy cảm xúc &mdash; Bùng cháy sân khấu chuyên nghiệp, trách nhiệm.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/accordion.js"></script>
+  <script src="js/booking-form.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/booking-submit.js"></script>
+</body>
+</html>

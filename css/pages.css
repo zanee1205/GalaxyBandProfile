@@ -1,0 +1,960 @@
+/* ==========================================================================
+   GALAXY BAND - SUBPAGES STYLES (pages.css)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. PAGE HEADER (Used on Lịch show, Blog, etc.)
+   -------------------------------------------------------------------------- */
+.page-header-section {
+  padding-top: var(--space-48);
+  padding-bottom: var(--space-32);
+}
+
+.page-header-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  max-width: 800px;
+}
+
+.page-h1 {
+  font-size: 42px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.page-subtext {
+  font-size: var(--fs-body-lg);
+  color: var(--text-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   2. TRANG LỊCH SHOW (lich-show.html)
+   -------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+   2. TRANG LỊCH SHOW (lich-show.html)
+   -------------------------------------------------------------------------- */
+.schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  margin-top: var(--space-28);
+}
+
+.schedule-card {
+  display: flex;
+  align-items: center;
+  padding: 24px 28px;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  gap: var(--space-28);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.schedule-card:hover {
+  transform: translateX(4px);
+  border-color: var(--border-glow);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.schedule-card.featured-show {
+  border-left: 4px solid var(--accent);
+  background: radial-gradient(circle at top right, rgba(133, 51, 255, 0.08) 0%, transparent 70%), var(--bg-elevated);
+}
+
+.schedule-day-col {
+  width: 140px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.schedule-day-title {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.schedule-date-str {
+  font-size: 13.5px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.schedule-info-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: var(--space-24);
+  border-left: 1px solid var(--border-subtle);
+}
+
+.schedule-show-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.35;
+}
+
+.schedule-venue {
+  font-size: 14px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.schedule-venue svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--accent-cyan);
+  flex-shrink: 0;
+}
+
+.schedule-time {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Common Booking Layout on Subpages */
+.booking-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: var(--space-48);
+  align-items: center;
+}
+
+.booking-form-card {
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: var(--space-40);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* --------------------------------------------------------------------------
+   3. TRANG DỊCH VỤ EVENT (dich-vu.html)
+   -------------------------------------------------------------------------- */
+.service-hero-card {
+  position: relative;
+  min-height: 420px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-card);
+  background-color: var(--bg-elevated);
+}
+
+.service-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.service-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, 
+    rgba(11, 7, 16, 0.95) 0%, 
+    rgba(11, 7, 16, 0.75) 55%, 
+    rgba(11, 7, 16, 0.35) 100%);
+  z-index: 2;
+}
+
+[data-theme="light"] .service-hero-overlay {
+  background: linear-gradient(110deg, 
+    rgba(247, 243, 252, 0.95) 0%, 
+    rgba(247, 243, 252, 0.75) 55%, 
+    rgba(247, 243, 252, 0.35) 100%);
+}
+
+.service-hero-content {
+  position: relative;
+  z-index: 3;
+  padding: 48px;
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+/* Grid 2x2: Mỗi sự kiện cần một đội hình khác nhau */
+.format-grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-20);
+}
+
+.format-card-horizontal {
+  display: flex;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.format-card-horizontal:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-glow);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.format-card-thumb {
+  width: 40%;
+  flex-shrink: 0;
+  position: relative;
+  min-height: 180px;
+}
+
+.format-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.format-card-body {
+  padding: var(--space-20);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-8);
+  flex: 1;
+}
+
+.format-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.format-card-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Grid 3 cột theo sân khấu & mức năng lượng */
+.stages-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-20);
+}
+
+.stage-card {
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+}
+
+.stage-card-img-wrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.stage-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.stage-card:hover .stage-card-img-wrap img {
+  transform: scale(1.06);
+}
+
+.stage-card-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+.stage-card-body {
+  padding: var(--space-20);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+/* Large 16:9 Video Showcase */
+.video-showcase-large {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  max-height: 480px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-card-hover);
+  margin-top: var(--space-40);
+  cursor: pointer;
+}
+
+.video-showcase-large img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-large-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(11, 7, 16, 0.4) 0%, rgba(11, 7, 16, 0.85) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-16);
+  padding: var(--space-24);
+  text-align: center;
+}
+
+.video-large-play-btn {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--glow-accent), 0 8px 24px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.video-showcase-large:hover .video-large-play-btn {
+  transform: scale(1.15);
+}
+
+.video-large-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   3.1 BẢNG GIÁ THAM KHẢO HIỆN ĐẠI & TRỰC QUAN (Pricing Cards)
+   -------------------------------------------------------------------------- */
+.pricing-tables-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-28);
+  margin-top: var(--space-32);
+}
+
+.pricing-master-card {
+  background: var(--bg-glass-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: var(--space-32);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-24);
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.pricing-master-card:hover {
+  border-color: var(--border-glow);
+  box-shadow: var(--shadow-card-hover), 0 0 30px rgba(133, 51, 255, 0.12);
+}
+
+.pricing-master-card.featured-pricing {
+  border: 1.5px solid rgba(224, 86, 253, 0.45);
+  background: radial-gradient(circle at top right, rgba(224, 86, 253, 0.08) 0%, transparent 60%),
+              var(--bg-glass-card);
+  box-shadow: 0 10px 40px rgba(133, 51, 255, 0.18);
+}
+
+.pricing-featured-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--gradient-primary);
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  box-shadow: var(--glow-accent);
+}
+
+.pricing-header-top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.pricing-card-title {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pricing-card-subtitle {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Tier items list */
+.pricing-tier-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.pricing-tier-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  background-color: var(--bg-elevated-2);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  gap: var(--space-16);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.pricing-tier-item:hover {
+  transform: translateX(4px);
+  border-color: var(--border-glow);
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.pricing-tier-item.tier-highlight {
+  border-color: rgba(224, 86, 253, 0.4);
+  background: linear-gradient(90deg, rgba(133, 51, 255, 0.1) 0%, rgba(224, 86, 253, 0.05) 100%), var(--bg-elevated-2);
+}
+
+.pricing-tier-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.pricing-tier-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pricing-tier-name {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.pricing-tier-tag {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: var(--radius-full);
+  background-color: rgba(0, 240, 255, 0.15);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+}
+
+.pricing-tier-tag.tag-hot {
+  background-color: rgba(255, 42, 109, 0.18);
+  color: #FF5376;
+  border-color: rgba(255, 42, 109, 0.35);
+}
+
+.pricing-tier-lineup {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.4;
+}
+
+.pricing-tier-lineup svg {
+  width: 13px;
+  height: 13px;
+  stroke: var(--accent);
+  flex-shrink: 0;
+}
+
+.pricing-tier-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.pricing-price-val {
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--text-primary);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
+.pricing-price-note {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.pricing-tier-cta-btn {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  transition: gap 0.2s ease, color 0.2s ease;
+  margin-top: 2px;
+}
+
+.pricing-tier-item:hover .pricing-tier-cta-btn {
+  color: var(--primary-light);
+  gap: 6px;
+}
+
+/* Checklist & Footer note */
+.pricing-footer-features {
+  padding-top: var(--space-16);
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.pricing-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: var(--text-secondary);
+}
+
+.pricing-feature-item svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--accent-cyan);
+  flex-shrink: 0;
+}
+
+.pricing-bottom-note {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 4px;
+}
+
+/* Media Event 3x2 Grid */
+.event-media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-16);
+}
+
+.event-media-card {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+}
+
+.event-media-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center; /* Crop from top so faces and heads of performers are prominently visible */
+  transition: transform 0.35s ease;
+}
+
+.event-media-card:hover img {
+  transform: scale(1.08);
+}
+
+.event-media-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(11, 7, 16, 0.88) 0%, rgba(11, 7, 16, 0.2) 50%, transparent 80%);
+  padding: var(--space-16);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Process Timeline (4 stages) */
+.timeline-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-20);
+  position: relative;
+  margin-top: var(--space-32);
+}
+
+.process-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  position: relative;
+}
+
+.process-step-num {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  border: 2px solid var(--primary);
+  color: var(--accent);
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--glow-primary);
+}
+
+.process-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.process-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Brief & Guidelines Section */
+.guidelines-grid {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  gap: var(--space-32);
+  align-items: center;
+}
+
+.checklist-card {
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  padding: var(--space-24);
+  box-shadow: var(--shadow-card);
+}
+
+.checklist-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-16);
+}
+
+.checklist-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-12);
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.checklist-check-icon {
+  width: 18px;
+  height: 18px;
+  stroke: var(--accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   4. TRANG BLOG (blog.html)
+   -------------------------------------------------------------------------- */
+.blog-grid-3x3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-24);
+}
+
+.blog-card {
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-glow);
+  box-shadow: var(--shadow-card-hover), var(--glow-primary);
+}
+
+.blog-thumb-wrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.blog-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.blog-card:hover .blog-thumb-img {
+  transform: scale(1.06);
+}
+
+.blog-thumb-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(11, 7, 16, 0.95) 0%, rgba(11, 7, 16, 0.4) 50%, transparent 80%);
+  padding: var(--space-16);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.blog-overlay-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blog-card-body {
+  padding: var(--space-20);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  flex: 1;
+}
+
+.blog-date {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.blog-card-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.35;
+  transition: color var(--transition-fast);
+}
+
+.blog-card:hover .blog-card-title {
+  color: var(--primary-light);
+}
+
+.blog-excerpt {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Pagination */
+.pagination-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-48);
+  padding-top: var(--space-32);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.pagination-pages {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.page-num-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+  background-color: transparent;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.page-num-btn:hover {
+  border-color: var(--primary);
+  color: var(--text-primary);
+}
+
+.page-num-btn.active {
+  background: var(--gradient-primary);
+  color: #FFFFFF;
+  border-color: transparent;
+  box-shadow: var(--glow-primary);
+}
+
+/* --------------------------------------------------------------------------
+   5. FAQ ACCORDION SECTION
+   -------------------------------------------------------------------------- */
+.accordion-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  max-width: 920px;
+  margin: var(--space-28) auto 0;
+}
+
+.accordion-item {
+  background: var(--bg-glass-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.accordion-item:hover {
+  border-color: var(--border-glow);
+}
+
+.accordion-item.is-open {
+  border-color: var(--primary);
+  background: var(--bg-elevated);
+  box-shadow: 0 6px 24px rgba(133, 51, 255, 0.15);
+}
+
+.accordion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-16);
+  padding: 18px 24px;
+  background: transparent;
+  border: none;
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: left;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.accordion-header:hover {
+  color: var(--primary-light);
+}
+
+.accordion-item.is-open .accordion-header {
+  color: var(--primary-light);
+}
+
+.accordion-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg-elevated-2);
+  border: 1px solid var(--border-glass);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--text-secondary);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.accordion-icon svg {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+}
+
+.accordion-item.is-open .accordion-icon {
+  transform: rotate(45deg);
+  background: var(--gradient-primary);
+  color: #FFFFFF;
+  border-color: transparent;
+  box-shadow: var(--glow-accent);
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+  opacity: 0;
+}
+
+.accordion-item.is-open .accordion-body {
+  max-height: 400px;
+  opacity: 1;
+}
+
+.accordion-content {
+  padding: 0 24px 22px 24px;
+  font-size: 14.5px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 16px;
+}
+

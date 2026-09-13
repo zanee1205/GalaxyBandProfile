@@ -1,0 +1,149 @@
+/* ==========================================================================
+   GALAXY BAND - ENHANCED DESIGN SYSTEM TOKENS (tokens.css)
+   ========================================================================== */
+
+:root {
+  /* --- DARK / SPACE CINEMATIC THEME (DEFAULT) --- */
+  --bg-base: #08040E;
+  --bg-elevated: #120A1E;
+  --bg-elevated-2: #1A0F2B;
+  --bg-glass: rgba(18, 10, 30, 0.75);
+  --bg-glass-card: rgba(26, 15, 43, 0.65);
+  
+  --border-subtle: rgba(255, 255, 255, 0.09);
+  --border-glow: rgba(255, 79, 216, 0.45);
+  --border-glass: rgba(255, 255, 255, 0.14);
+  
+  --primary: #8533FF;
+  --primary-dark: #4B1D8C;
+  --primary-light: #A866FF;
+  --accent: #FF3DB8;
+  --accent-cyan: #00F0FF;
+  --accent-gold: #FFB800;
+  --accent-soft: rgba(255, 61, 184, 0.15);
+  --cyan-soft: rgba(0, 240, 255, 0.15);
+  
+  --gradient-primary: linear-gradient(135deg, #8533FF 0%, #FF3DB8 100%);
+  --gradient-cyan-purple: linear-gradient(135deg, #00F0FF 0%, #8533FF 100%);
+  --gradient-gold-pink: linear-gradient(135deg, #FFB800 0%, #FF3DB8 100%);
+  --gradient-card: linear-gradient(180deg, rgba(30, 16, 52, 0.8) 0%, rgba(18, 10, 30, 0.95) 100%);
+  --gradient-overlay: linear-gradient(to top, rgba(8, 4, 14, 0.98) 0%, rgba(8, 4, 14, 0.6) 45%, transparent 100%);
+  
+  --text-primary: #FFFFFF;
+  --text-secondary: #C4B9E0;
+  --text-muted: #8375A4;
+  
+  --nebula-blur-1: radial-gradient(circle, rgba(133, 51, 255, 0.45) 0%, rgba(133, 51, 255, 0) 70%);
+  --nebula-blur-2: radial-gradient(circle, rgba(255, 61, 184, 0.35) 0%, rgba(255, 61, 184, 0) 70%);
+  --nebula-cyan: radial-gradient(circle, rgba(0, 240, 255, 0.25) 0%, rgba(0, 240, 255, 0) 70%);
+  --nebula-opacity: 1;
+  --star-dot: rgba(255, 255, 255, 0.7);
+  --watermark-opacity: 0.05;
+  --watermark-color: #FFFFFF;
+
+  --shadow-card: 0 12px 32px rgba(0, 0, 0, 0.45);
+  --shadow-card-hover: 0 20px 48px rgba(0, 0, 0, 0.65);
+  --glow-primary: 0 0 30px rgba(133, 51, 255, 0.5);
+  --glow-accent: 0 0 28px rgba(255, 61, 184, 0.5);
+  --glow-cyan: 0 0 28px rgba(0, 240, 255, 0.45);
+
+  /* --- TYPOGRAPHY SCALE --- */
+  --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Be Vietnam Pro', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --fs-display: 58px;
+  --lh-display: 1.06;
+  --fs-h2: 42px;
+  --lh-h2: 1.15;
+  --fs-h3: 22px;
+  --lh-h3: 1.3;
+  --fs-body-lg: 18px;
+  --lh-body-lg: 1.6;
+  --fs-body: 15px;
+  --lh-body: 1.6;
+  --fs-caption: 13px;
+  --lh-caption: 1.4;
+
+  /* --- SPACING SCALE --- */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-96: 96px;
+  --space-128: 128px;
+
+  --section-padding-y: 108px;
+  --container-max-width: 1320px;
+  --container-padding-x: 24px;
+
+  /* --- BORDER RADIUS SCALE --- */
+  --radius-full: 9999px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-card: 24px;
+  --radius-lg: 32px;
+  --radius-avatar: 50%;
+
+  /* --- TRANSITIONS --- */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-theme: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+
+  /* --- HEADER & NAV --- */
+  --header-height: 84px;
+  --header-bg: rgba(8, 4, 14, 0.85);
+  --header-blur: 18px;
+}
+
+/* --- LIGHT / PEARL COSMIC THEME --- */
+[data-theme="light"] {
+  --bg-base: #F6F2FC;
+  --bg-elevated: #FFFFFF;
+  --bg-elevated-2: #ECE2F8;
+  --bg-glass: rgba(255, 255, 255, 0.85);
+  --bg-glass-card: rgba(255, 255, 255, 0.9);
+  
+  --border-subtle: rgba(75, 29, 140, 0.12);
+  --border-glow: rgba(255, 61, 184, 0.4);
+  --border-glass: rgba(133, 51, 255, 0.15);
+  
+  --primary: #7B2FF7;
+  --primary-dark: #5A22B8;
+  --primary-light: #9B5CFF;
+  --accent: #E62CA5;
+  --accent-cyan: #00A6B8;
+  --accent-gold: #D48800;
+  --accent-soft: rgba(230, 44, 165, 0.12);
+  --cyan-soft: rgba(0, 166, 184, 0.12);
+  
+  --gradient-primary: linear-gradient(135deg, #7B2FF7 0%, #E62CA5 100%);
+  --gradient-cyan-purple: linear-gradient(135deg, #00A6B8 0%, #7B2FF7 100%);
+  --gradient-card: linear-gradient(180deg, #FFFFFF 0%, #F9F6FD 100%);
+  --gradient-overlay: linear-gradient(to top, rgba(246, 242, 252, 0.98) 0%, rgba(246, 242, 252, 0.6) 45%, transparent 100%);
+  
+  --text-primary: #150A26;
+  --text-secondary: #564870;
+  --text-muted: #887B9F;
+  
+  --nebula-blur-1: radial-gradient(circle, rgba(123, 47, 247, 0.15) 0%, rgba(123, 47, 247, 0) 70%);
+  --nebula-blur-2: radial-gradient(circle, rgba(230, 44, 165, 0.12) 0%, rgba(230, 44, 165, 0) 70%);
+  --nebula-cyan: radial-gradient(circle, rgba(0, 166, 184, 0.10) 0%, rgba(0, 166, 184, 0) 70%);
+  --nebula-opacity: 0.7;
+  --star-dot: rgba(123, 47, 247, 0.25);
+  --watermark-opacity: 0.04;
+  --watermark-color: #4B1D8C;
+
+  --shadow-card: 0 10px 28px rgba(75, 29, 140, 0.07);
+  --shadow-card-hover: 0 18px 40px rgba(75, 29, 140, 0.12);
+  --glow-primary: 0 0 24px rgba(123, 47, 247, 0.25);
+  --glow-accent: 0 0 20px rgba(230, 44, 165, 0.25);
+
+  --header-bg: rgba(246, 242, 252, 0.88);
+}

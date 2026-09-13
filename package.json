@@ -1,0 +1,13 @@
+{
+  "name": "galaxy-band-booking-backend",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Vercel serverless backend for Galaxy Band booking requests",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1",
+    "resend": "^4.1.2"
+  }
+}
