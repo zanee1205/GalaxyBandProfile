@@ -6,6 +6,10 @@
   "engines": {
     "node": ">=18"
   },
+  "scripts": {
+    "dev": "npx serve . -l 3000",
+    "start": "npx serve . -l 3000"
+  },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.1",
     "resend": "^4.1.2"

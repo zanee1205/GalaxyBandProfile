@@ -347,6 +347,52 @@
   color: #FFFFFF;
 }
 
+.btn:disabled,
+.btn[disabled],
+button:disabled {
+  cursor: not-allowed !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.btn-primary:disabled,
+.btn-primary[disabled],
+.btn-primary.is-loading,
+.btn-primary.btn-disabled {
+  background: #383147 !important;
+  color: #c4bcd4 !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: none !important;
+  transform: none !important;
+  cursor: not-allowed !important;
+  pointer-events: none;
+}
+
+.btn-primary:disabled:hover,
+.btn-primary[disabled]:hover,
+.btn-primary.is-loading:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  background: #383147 !important;
+  color: #c4bcd4 !important;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-icon {
+  animation: spin 0.85s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
 .btn-secondary {
   background-color: var(--bg-glass);
   backdrop-filter: blur(10px);
@@ -662,7 +708,7 @@
 
 .artist-poster-wrap {
   position: relative;
-  aspect-ratio: 3 / 3.8;
+  aspect-ratio: 3 / 2.7;
   overflow: hidden;
   background-color: #0b0710;
   transform: translateZ(0);
@@ -688,32 +734,44 @@
 .artist-deck-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(8, 4, 14, 0.98) 0%, rgba(8, 4, 14, 0.45) 50%, transparent 75%);
-  padding: var(--space-24);
+  background: linear-gradient(to top, rgba(8, 4, 14, 0.95) 0%, rgba(8, 4, 14, 0.25) 35%, transparent 60%);
+  padding: 10px 14px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   z-index: 2;
 }
 
+.artist-deck-overlay .badge {
+  font-size: 9.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  padding: 3px 8px !important;
+  min-height: auto;
+  border-radius: var(--radius-sm);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
 .artist-name-title {
-  font-size: 26px;
+  font-size: 18px;
   font-weight: 800;
   color: #FFFFFF;
+  line-height: 1.2;
 }
 
 .artist-voice-style {
-  font-size: 13px;
+  font-size: 11px;
   color: var(--accent-cyan);
   font-weight: 600;
 }
 
 .artist-body-details {
-  padding: var(--space-20);
+  padding: 14px 16px;
   background-color: var(--bg-elevated-2);
   display: flex;
   flex-direction: column;
-  gap: var(--space-12);
+  gap: 10px;
   flex: 1;
 }
 
@@ -724,9 +782,9 @@
 }
 
 .artist-tag-pill {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
-  padding: 4px 10px;
+  padding: 2px 8px;
   border-radius: var(--radius-full);
   background: rgba(133, 51, 255, 0.15);
   color: var(--primary-light);
@@ -763,7 +821,7 @@
 
 .lineup-thumb-wrap {
   position: relative;
-  aspect-ratio: 3 / 3.6;
+  aspect-ratio: 3 / 2.7;
   overflow: hidden;
   background-color: #0b0710;
   transform: translateZ(0);
@@ -788,16 +846,22 @@
 
 .lineup-badge-role {
   position: absolute;
-  top: 14px;
-  left: 14px;
+  top: 8px;
+  left: 8px;
   z-index: 3;
-  background: rgba(0, 0, 0, 0.65) !important;
+  background: rgba(0, 0, 0, 0.6) !important;
   color: #FFFFFF !important;
-  border-color: rgba(255, 255, 255, 0.3) !important;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  font-size: 9.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  padding: 3px 8px !important;
+  min-height: auto;
+  border-radius: var(--radius-sm);
 }
 
 .lineup-thumb-wrap::after {
@@ -806,34 +870,50 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 60px;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, transparent 100%);
+  height: 36px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, transparent 100%);
   z-index: 2;
   pointer-events: none;
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
 .lineup-info-box {
-  padding: var(--space-20);
+  padding: 14px 16px;
   display: flex;
   flex-direction: column;
   gap: 6px;
+  flex: 1;
 }
 
 .lineup-name {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 800;
   color: var(--text-primary);
 }
 
 .lineup-freq {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--accent-cyan);
 }
 
+.lineup-exp-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 4px;
+}
+
+.lineup-exp-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 .lineup-desc {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-secondary);
   line-height: 1.45;
 }
@@ -1204,4 +1284,262 @@
   padding: 16px 20px;
   color: var(--text-primary);
   font-size: 14px;
+}
+
+/* ==========================================================================
+   TIKTOK-STYLE VERTICAL VIDEO FEED MODAL
+   ========================================================================== */
+
+.tiktok-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(5, 2, 10, 0.92);
+  backdrop-filter: blur(16px);
+  z-index: 250;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
+}
+
+.tiktok-modal-backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.tiktok-phone-container {
+  background-color: #000;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 28px;
+  max-width: 440px;
+  width: 100%;
+  height: min(88vh, 780px);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(133, 51, 255, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.tiktok-feed-wrapper {
+  flex: 1;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.tiktok-feed-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.tiktok-slide {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.tiktok-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #000;
+  cursor: pointer;
+}
+
+.tiktok-top-bar {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.tiktok-artist-badge {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(10px);
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.tiktok-counter-badge {
+  background: rgba(133, 51, 255, 0.6);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.tiktok-close-btn {
+  pointer-events: auto;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.tiktok-close-btn:hover {
+  background: rgba(255, 61, 184, 0.6);
+  transform: scale(1.08);
+}
+
+.tiktok-bottom-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 70px;
+  padding: 24px 20px 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
+  z-index: 15;
+  pointer-events: none;
+}
+
+.tiktok-video-title {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 6px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.tiktok-video-desc {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.tiktok-audio-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent-cyan);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tiktok-actions-sidebar {
+  position: absolute;
+  right: 14px;
+  bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 20;
+  align-items: center;
+}
+
+.tiktok-action-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(20, 10, 30, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.tiktok-action-btn:hover {
+  background: var(--gradient-primary);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.1);
+}
+
+.tiktok-play-state-icon {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.25s, transform 0.25s;
+  z-index: 12;
+}
+
+.tiktok-play-state-icon.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.tiktok-scroll-hint {
+  position: absolute;
+  top: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 240, 255, 0.4);
+  color: var(--accent-cyan);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 22;
+  pointer-events: none;
+  animation: pulseHint 2s infinite;
+  transition: opacity 0.5s;
+}
+
+@keyframes pulseHint {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.9; }
+  50% { transform: translateX(-50%) translateY(-4px); opacity: 1; }
+}
+
+@media (max-width: 480px) {
+  .tiktok-phone-container {
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+    border: none;
+  }
 }

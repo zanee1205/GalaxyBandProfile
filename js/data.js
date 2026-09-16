@@ -10,8 +10,9 @@ const GALAXY_DATA = {
       name: "Ngọc Giàu",
       role: "Vocalist Nữ",
       gender: "female",
-      photo: "vocalist - Ngọc Giàu.jpg",
+      photo: "images/vocalist - Ngọc Giàu.jpg",
       voiceStyle: "Khỏe, trẻ trung, sôi động",
+      experience: "Quán quân Tuyệt đỉnh song ca Cặp đôi vàng, cùng góp mặt trong các chương trình truyền hình của các đài truyền hình VN với nghệ danh ca sỹ Ngọc Giàu. Kinh nghiệm nhiều năm biểu diễn các chương trình âm nhạc, sân khấu lớn.",
       genres: ["Rock", "Ballad", "Pop"],
       mood: ["Sôi động", "Trẻ trung", "Năng lượng", "Mạnh mẽ"],
       showFormat: ["Live band sân khấu lớn", "Rock night", "Ballad đêm nhạc", "Acoustic mạnh"],
@@ -25,14 +26,15 @@ const GALAXY_DATA = {
       name: "Louis Nguyễn",
       role: "Vocalist Nam",
       gender: "male",
-      photo: "vocalist - Louis Nguyễn.jpg",
-      voiceStyle: "Cuốn hút, cá tính",
-      genres: ["Indie Việt", "Pop", "Indie Pop"],
-      mood: ["Cá tính", "Cuốn hút", "Chill", "Có chiều sâu"],
-      showFormat: ["Acoustic café", "Indie night", "Dinner set nhẹ nhàng"],
+      photo: "images/vocalist - Louis Nguyễn.jpg",
+      voiceStyle: "Cuốn hút, cá tính, bùng nổ",
+      experience: "Tốt nghiệp Cao đẳng Văn hoá Nghệ thuật ngành Thanh nhạc, từng tham gia show “Dưới ánh sáng quang vinh” và có kinh nghiệm đi hát cho các sự kiện của Heineken, Huda, Đầm Sen và các quán cafe lớn nhỏ trên TP.HCM.",
+      genres: ["Indie Việt", "Pop", "Rock"],
+      mood: ["Cá tính", "Cuốn hút", "Năng động", "Bùng nổ"],
+      showFormat: ["Show năng động", "Bùng nổ sân khấu", "Indie Rock night", "Event sôi động"],
       demoVideos: [
-        { title: "Bao Tiền Một Mớ Bình Yên (Live Indie)", duration: "03:30", views: "32.1K" },
-        { title: "Một Đêm Say (Acoustic Chill Out)", duration: "03:55", views: "19.8K" }
+        { title: "Bao Tiền Một Mớ Bình Yên (Live Indie Rock)", duration: "03:30", views: "32.1K" },
+        { title: "Tìm Lại (Rock Power Live)", duration: "03:55", views: "29.8K" }
       ]
     },
     {
@@ -40,11 +42,26 @@ const GALAXY_DATA = {
       name: "Trang Halley",
       role: "Vocalist Nữ",
       gender: "female",
-      photo: "vocalist - Trang Halley.jpg",
-      voiceStyle: "Quyến rũ, lả lơi",
+      photo: "images/vocalist - Trang Halley.jpg",
+      voiceStyle: "Quyến rũ, lả lơi, bốc lửa",
+      experience: "Tốt nghiệp Cao đẳng Nghệ thuật Hà Nội chuyên ngành Thanh nhạc, từng tham gia nhiều chương trình văn hóa nghệ thuật của đài truyền hình VTV VN, dày dặn kinh nghiệm biểu diễn nghệ thuật tại các phòng trà, quán cà phê, lounge, pub, tiệc cưới.",
       genres: ["US/UK Hits", "Electronic", "Remix/EDM"],
       mood: ["Quyến rũ", "Sôi động", "Gợi cảm", "Bùng nổ"],
       showFormat: ["Bar/Club night", "Event sôi động", "Remix set", "After party"],
+      videos: [
+        {
+          title: "Hà Acoustic — Trang Halley",
+          src: "videos/Hà Acoustic - Trang Halley.mp4",
+          poster: "images/Hà Acoustic Banner.png",
+          desc: "Live Acoustic sâu lắng & cuốn hút"
+        },
+        {
+          title: "Private Show Live Music",
+          src: "videos/Private Show.mp4",
+          poster: "images/Private show banner.png",
+          desc: "Sân khấu Private Lounge bùng nổ"
+        }
+      ],
       demoVideos: [
         { title: "Levitating x Don't Start Now (Live Medley)", duration: "04:05", views: "45.0K" },
         { title: "Waiting For You (Club Remix Set)", duration: "03:40", views: "38.2K" }
@@ -60,8 +77,9 @@ const GALAXY_DATA = {
       role: "Drummer",
       instrumentBadge: "DRUMMER",
       caption: "Drums / Percussion",
-      photo: "drummer - Trần Khuê.jpg",
-      description: "Người giữ nhịp cho cả band, có khả năng chuyển sắc thái bài hát từ buồn bã sang sôi động, điều phối lửa xuyên suốt các bài hát."
+      photo: "images/drummer - Trần Khuê.jpg",
+      description: "Người giữ nhịp cho cả band, có khả năng chuyển sắc thái bài hát từ buồn bã sang sôi động, điều phối lửa xuyên suốt các bài hát.",
+      experience: "Từng tham gia diễn nhiều showcase, concert với quy mô 300-500 khán giả, kinh nghiệm chơi trống 3 năm, nền tảng kỹ thuật vững chắc."
     },
     {
       id: "nhat-hao",
@@ -69,8 +87,9 @@ const GALAXY_DATA = {
       role: "Guitarist",
       instrumentBadge: "GUITARIST",
       caption: "Acoustic/Electric Guitar",
-      photo: "guitarist - Nhật Hào.JPG",
-      description: "Khả năng cảm nhạc cực tốt, làm chủ nhạc cụ, phô diễn kỹ thuật xuất sắc trong bài hát, dễ dàng tôn giọng hát của các vocalist lên cao."
+      photo: "images/guitarist - Nhật Hào.JPG",
+      description: "Khả năng cảm nhạc cực tốt, làm chủ nhạc cụ, phô diễn kỹ thuật xuất sắc trong bài hát, dễ dàng tôn giọng hát của các vocalist lên cao.",
+      experience: "Tham gia học tại Nhạc viện Thành phố Hồ Chí Minh, đã từng góp mặt trong rất nhiều các concert, event của nghệ sỹ nổi tiếng, kinh nghiệm nhiều năm chơi guitar và biễu diễn nghệ thuật thành thạo."
     },
     {
       id: "hung-trong",
@@ -78,8 +97,9 @@ const GALAXY_DATA = {
       role: "Bassist",
       instrumentBadge: "BASSIST",
       caption: "Bass Guitar",
-      photo: "bassist - Hùng Trọng.jpg",
-      description: "Người kết nối các nhạc cụ và vocalist lại với nhau, kiểm soát âm tần trầm, tạo độ vang và lắng đọng trong bài nhạc."
+      photo: "images/bassist - Hùng Trọng.jpg",
+      description: "Người kết nối các nhạc cụ và vocalist lại với nhau, kiểm soát âm tần trầm, tạo độ vang và lắng đọng trong bài nhạc.",
+      experience: "Kinh nghiệm hơn 3 năm tham gia biểu diễn acoustic show với vai trò guitar/bassist, nền tảng chuyên môn và kĩ thuật vững chắc, am hiểu đa thể loại âm nhạc."
     },
     {
       id: "tuan-duy",
@@ -87,8 +107,9 @@ const GALAXY_DATA = {
       role: "Keyboardist / Pianist",
       instrumentBadge: "KEYBOARDIST",
       caption: "Keyboard / Piano",
-      photo: "keyboardist - Tuấn Duy.jpg",
-      description: "Người ấn định màu sắc của bản nhạc, góp phần cho bài hát thêm có hồn, mang đậm tính nghệ thuật."
+      photo: "images/keyboardist - Tuấn Duy.jpg",
+      description: "Người ấn định màu sắc của bản nhạc, góp phần cho bài hát thêm có hồn, mang đậm tính nghệ thuật.",
+      experience: "Dày dặn kỹ thuật chuyên môn, thành thao nhiều thể loại nhạc khác nhau, kinh nghiệm nhiều năm liền biểu diễn nghệ thuật tại các khu vực tỉnh thành lớn: Đà Lạt, Buôn Mê Thuột, Hà Nội, TPHCM."
     }
   ],
 
@@ -98,25 +119,25 @@ const GALAXY_DATA = {
       title: "Gala Dinner & Year End Party",
       category: "SỰ KIỆN DOANH NGHIỆP",
       desc: "Âm nhạc sang trọng khai tiệc và bùng nổ năng lượng ở phần tiệc chính.",
-      photo: "Band on stage 1.jpg"
+      photo: "images/Band on stage 1.jpg"
     },
     {
       title: "Tiệc Cưới & Lễ Kỷ Niệm Cao Cấp",
       category: "WEDDING & PRIVATE",
       desc: "Giai điệu lãng mạn, acoustic ballad sâu lắng dẫn lối cảm xúc trọn vẹn.",
-      photo: "Band on stage 2.jpg"
+      photo: "images/Band on stage 2.jpg"
     },
     {
       title: "Acoustic Lounge & Cafe Show",
       category: "LIVE LOUNGE & CAFE",
       desc: "Không gian mộc mạc, gần gũi với khán giả qua các bản tình ca ấm áp.",
-      photo: "vocalist - Louis Nguyễn.jpg"
+      photo: "images/vocalist - Louis Nguyễn.jpg"
     },
     {
       title: "Concert & Festival Ngoài Trời",
       category: "OUTDOOR FESTIVAL",
       desc: "Dàn dựng hoành tráng, hòa âm rock/pop phối mới đốt cháy sân khấu lớn.",
-      photo: "Band on stage 1.jpg"
+      photo: "images/Band on stage 1.jpg"
     }
   ],
 
@@ -177,7 +198,7 @@ const GALAXY_DATA = {
       category: "KINH NGHIỆM BOOK BAND",
       date: "10 Tháng 9, 2026",
       excerpt: "Bí quyết cân đối giữa không gian đón khách nhẹ nhàng và phần tiệc bùng nổ cuối chương trình để khách mời hòa mình trọn vẹn...",
-      thumb: "Band on stage 1.jpg"
+      thumb: "images/Band on stage 1.jpg"
     },
     {
       id: 2,
@@ -185,7 +206,7 @@ const GALAXY_DATA = {
       category: "SETLIST TIỆC CƯỚI",
       date: "06 Tháng 9, 2026",
       excerpt: "Tổng hợp các bản tình ca ngọt ngào, giai điệu êm dịu giúp nghi thức lễ và tiệc rượu thêm phần lãng mạn khó quên...",
-      thumb: "Band on stage 2.jpg"
+      thumb: "images/Band on stage 2.jpg"
     },
     {
       id: 3,
@@ -193,7 +214,7 @@ const GALAXY_DATA = {
       category: "HƯỚNG DẪN BOOKING",
       date: "01 Tháng 9, 2026",
       excerpt: "Nắm rõ 6 thông tin cốt lõi ban nhạc cần biết trước khi gửi phương án biểu diễn và setup âm thanh chuẩn xác...",
-      thumb: "guitarist - Nhật Hào.JPG"
+      thumb: "images/guitarist - Nhật Hào.JPG"
     },
     {
       id: 4,
@@ -201,7 +222,7 @@ const GALAXY_DATA = {
       category: "CHUYỆN HẬU TRƯỜNG",
       date: "25 Tháng 8, 2026",
       excerpt: "Hành trình tập luyện phối mới các bản hit đình đám với tinh thần làm chủ sân khấu và tôn vinh cảm xúc người nghe...",
-      thumb: "drummer - Trần Khuê.jpg"
+      thumb: "images/drummer - Trần Khuê.jpg"
     },
     {
       id: 5,
@@ -209,7 +230,7 @@ const GALAXY_DATA = {
       category: "ÂM THANH SỰ KIỆN",
       date: "18 Tháng 8, 2026",
       excerpt: "Lợi ích khi đội ngũ soundman hiểu rõ gu âm thanh và thông số nhạc cụ của từng thành viên trong ban nhạc...",
-      thumb: "bassist - Hùng Trọng.jpg"
+      thumb: "images/bassist - Hùng Trọng.jpg"
     },
     {
       id: 6,
@@ -217,7 +238,7 @@ const GALAXY_DATA = {
       category: "XU HƯỚNG ÂM NHẠC",
       date: "12 Tháng 8, 2026",
       excerpt: "Sự kết hợp ăn ý giữa phong cách mộc mạc acoustic và những đoạn drop cao trào được giới trẻ cực kỳ yêu thích...",
-      thumb: "keyboardist - Tuấn Duy.jpg"
+      thumb: "images/keyboardist - Tuấn Duy.jpg"
     },
     {
       id: 7,
@@ -225,7 +246,7 @@ const GALAXY_DATA = {
       category: "ĐỊA ĐIỂM SỰ KIỆN",
       date: "05 Tháng 8, 2026",
       excerpt: "Đánh giá chi tiết về không gian, hệ thống tiêu âm và tính tiện lợi của các khán phòng sự kiện hàng đầu...",
-      thumb: "Band on stage 1.jpg"
+      thumb: "images/Band on stage 1.jpg"
     },
     {
       id: 8,
@@ -233,7 +254,7 @@ const GALAXY_DATA = {
       category: "GẶP GỠ NGHỆ SĨ",
       date: "28 Tháng 7, 2026",
       excerpt: "Chia sẻ chân thật về phong cách biểu diễn quyến rũ và bí quyết giữ lửa giọng hát qua hàng chục show diễn liên tục...",
-      thumb: "vocalist - Trang Halley.jpg"
+      thumb: "images/vocalist - Trang Halley.jpg"
     },
     {
       id: 9,
@@ -241,7 +262,7 @@ const GALAXY_DATA = {
       category: "KINH NGHIỆM ĐIỀU PHỐI",
       date: "20 Tháng 7, 2026",
       excerpt: "Quy trình soundcheck, kiểm tra line mic và khớp kịch bản chi tiết cùng MC và ekip sân khấu...",
-      thumb: "vocalist - Ngọc Giàu.jpg"
+      thumb: "images/vocalist - Ngọc Giàu.jpg"
     }
   ],
 

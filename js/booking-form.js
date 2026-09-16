@@ -44,18 +44,20 @@ document.addEventListener('DOMContentLoaded', () => {
       if (submitBtn) {
         const originalText = submitBtn.innerHTML;
         submitBtn.disabled = true;
+        submitBtn.classList.add('is-loading');
         submitBtn.innerHTML = `
           <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" fill="none" class="spin-icon">
             <circle cx="12" cy="12" r="10" stroke-width="3" stroke-dasharray="32" stroke-linecap="round"></circle>
           </svg>
-          Đang gửi yêu cầu...
+          Đang gửi...
         `;
 
         setTimeout(() => {
           submitBtn.disabled = false;
+          submitBtn.classList.remove('is-loading');
           submitBtn.innerHTML = originalText;
           form.reset();
-          window.GalaxyApp?.showToast('🎉 Gửi yêu cầu thành công! Galaxy Band sẽ liên hệ tư vấn trong 15 phút.', 'success');
+          window.GalaxyApp?.showToast('🎉 Gửi yêu cầu thành công! Galaxy Band sẽ liên hệ đến quý khách hàng trong thời gian sớm nhất.', 'success');
         }, 800);
       }
     });
