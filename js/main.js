@@ -101,12 +101,13 @@
       modal.className = 'tiktok-modal-backdrop';
 
       const totalVideos = videoList.length;
-      let currentIndex = 0;
-      let isMuted = false;
+      let currentIndex = -1;
+      // Muted autoplay is required for reliable playback on iOS and Android.
+      let isMuted = true;
 
       const slidesHtml = videoList.map((item, idx) => `
         <div class="tiktok-slide" data-index="${idx}">
-          <video class="tiktok-video" src="${encodeURI(item.src)}" poster="${item.poster || ''}" playsinline loop preload="metadata"></video>
+          <video class="tiktok-video" data-src="${encodeURI(item.src)}" poster="${item.poster || ''}" playsinline loop muted preload="none"></video>
           
           <div class="tiktok-play-state-icon">
             <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
@@ -175,23 +176,37 @@
         if (hintEl) hintEl.style.opacity = '0';
       }, 2500);
 
-      // Play / Pause management per slide
+      // Only attach a media source to the visible slide. This prevents mobile
+      // browsers from buffering and decoding every large video in the feed.
+      const loadVideo = (video) => {
+        if (!video.src) {
+          video.src = video.dataset.src;
+          video.load();
+        }
+      };
+
+      const unloadVideo = (video) => {
+        video.pause();
+        video.removeAttribute('src');
+        video.load();
+      };
+
+      // Play / pause management for the active slide only.
       const playSlide = (index) => {
+        if (index === currentIndex) return;
+
         slides.forEach((slide, idx) => {
           const video = slide.querySelector('video');
           if (!video) return;
           if (idx === index) {
+            loadVideo(video);
             video.muted = isMuted;
             const playPromise = video.play();
             if (playPromise !== undefined) {
-              playPromise.catch(() => {
-                video.muted = true;
-                video.play().catch(() => {});
-              });
+              playPromise.catch(() => {});
             }
           } else {
-            video.pause();
-            video.currentTime = 0;
+            unloadVideo(video);
           }
         });
         if (counterEl) counterEl.textContent = `${index + 1} / ${totalVideos}`;
@@ -219,8 +234,9 @@
         const playIcon = slide.querySelector('.tiktok-play-state-icon');
         slide.addEventListener('click', (e) => {
           if (e.target.closest('.tiktok-actions-sidebar') || e.target.closest('.tiktok-top-bar')) return;
+          loadVideo(video);
           if (video.paused) {
-            video.play();
+            video.play().catch(() => {});
             if (playIcon) playIcon.classList.remove('show');
           } else {
             video.pause();
@@ -253,10 +269,8 @@
       muteBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         isMuted = !isMuted;
-        slides.forEach(slide => {
-          const v = slide.querySelector('video');
-          if (v) v.muted = isMuted;
-        });
+        const activeVideo = slides[currentIndex]?.querySelector('video');
+        if (activeVideo) activeVideo.muted = isMuted;
         muteBtn.innerHTML = isMuted
           ? `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>`
           : `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>`;
@@ -268,8 +282,7 @@
         slides.forEach(slide => {
           const v = slide.querySelector('video');
           if (v) {
-            v.pause();
-            v.currentTime = 0;
+            unloadVideo(v);
           }
         });
         observer.disconnect();
@@ -292,7 +305,8 @@
           e.preventDefault();
           const curVideo = slides[currentIndex]?.querySelector('video');
           if (curVideo) {
-            if (curVideo.paused) curVideo.play();
+            loadVideo(curVideo);
+            if (curVideo.paused) curVideo.play().catch(() => {});
             else curVideo.pause();
           }
         }

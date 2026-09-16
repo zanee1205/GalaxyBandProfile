@@ -1543,3 +1543,32 @@ button:disabled {
     border: none;
   }
 }
+
+/* Mobile GPUs struggle when video playback is combined with several blur layers. */
+@media (max-width: 768px) {
+  .tiktok-modal-backdrop,
+  .tiktok-artist-badge,
+  .tiktok-close-btn,
+  .tiktok-action-btn,
+  .tiktok-play-state-icon,
+  .tiktok-scroll-hint {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .tiktok-modal-backdrop {
+    background-color: rgba(5, 2, 10, 0.98);
+  }
+
+  .tiktok-phone-container {
+    box-shadow: none;
+  }
+
+  .tiktok-feed-wrapper {
+    scroll-behavior: auto;
+  }
+
+  .tiktok-scroll-hint {
+    animation: none;
+  }
+}
